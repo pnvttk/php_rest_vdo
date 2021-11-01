@@ -19,7 +19,7 @@
     if($num > 0) {
         // video array
         $video_arr = array();
-        $video_arr['data'] = array();
+        // $video_arr['data'] = array(); //! not work with [object : data]
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
@@ -33,7 +33,8 @@
                 'img_url' => $img_url
             );
             // push to "data"
-            array_push($video_arr['data'], $video_item);
+            // array_push($video_arr['data'], $video_item); //! not work with [object:data]
+            array_push($video_arr, $video_item);
         }
 
         // turn to json 
