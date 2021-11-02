@@ -47,7 +47,6 @@
             $this->title = $row['title'];
             $this->url = $row['url'];
             $this->description = $row['description'];
-            $this->img = $row['img'];
             $this->img_url = $row['img_url'];
 
             return $stmt;           

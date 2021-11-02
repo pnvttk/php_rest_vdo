@@ -41,7 +41,7 @@
                 // 'img' => $img
                 'img_url' => $img_url
             );
-            // push to "data"
+            // push to "data" 
             // array_push($video_arr['data'], $video_item); //! not work with [object:data]
             array_push($video_arr, $video_item);
         }

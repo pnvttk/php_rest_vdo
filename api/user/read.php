@@ -19,7 +19,7 @@
     if($num > 0) {
         // user array
         $user_arr = array();
-        $user_arr['data'] = array();
+        // $user_arr['data'] = array(); //! don't use
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
@@ -31,6 +31,7 @@
                 'email' => $email
             );
             // push to "data"
+            // array_push($user_arr['data'], $user_item); //! don't use [data]
             array_push($user_arr['data'], $user_item);
         }
 

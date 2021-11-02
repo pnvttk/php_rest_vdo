@@ -22,7 +22,6 @@
         'title' => $video->title,
         'url' => $video->url,
         'description' => $video->description,
-        // 'img' => $video->img,
         'img_url' => $video->img_url
     );
 
