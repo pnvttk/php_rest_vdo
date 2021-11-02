@@ -1,7 +1,16 @@
 <?php
     // header
+    header("Access-Control-Request-Headers: X-Requested-With, accept, content-type");
+    header("Access-Control-Allow-Methods: GET, POST");
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json");
+    //Part added by ilyas :
+    if (isset($_SERVER['HTTP_ORIGIN'])) {
+        header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+        header('Access-Control-Allow-Credentials: true');
+        header('Access-Control-Max-Age: 86400');    // cache for 1 day
+    }
+//End of part.
 
     include_once '../../config/Database.php';
     include_once '../../models/Video.php';
